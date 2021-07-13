@@ -30,20 +30,20 @@ CSS becerilerinizi profesyonel hale getirmenize yardımcı olacak ipuçları kol
 1. [Listeleri Virgül İle Ayırın](#listeleri-virgül-i̇le-ayırın)
 1. [`nth-child` Kullanarak Elemanları Native Olarak Seçin](#nth-child-kullanarak-elemanları-native-olarak-seçin)
 1. [İkonlar İçin SVG Kullanın](#i̇konlar-i̇çin-svg-kullanın)
-1. ["Lobotomized Owl" Seçicisini Kullanın](#use-the-lobotomized-owl-selector)
-1. [Pure CSS Slider'lar İçin `max-height` Kullanın](#use-max-height-for-pure-css-sliders)
-1. [Tablo Hücrelerinin Genişliklerini Eşitleyin](#equal-width-table-cells)
-1. [Flexbox İle Margin'den Kurtulun](#get-rid-of-margin-hacks-with-flexbox)
-1. [Boş Linkler İle Attribute Selector'larini Kullanın](#use-attribute-selectors-with-empty-links)
-1. [Link'lerin varsayılan halini stillendirin](#style-default-links)
-1. [Intrinsic Ratio Box'ları](#intrinsic-ratio-boxes)
-1. [Hatalı Image'leri stillendirin](#style-broken-images)
-1. [Global Boyutlandırma İçin `rem` Kullanın; Lokal Boyutlandırma İçin `em` Kullanın](#use-rem-for-global-sizing-use-em-for-local-sizing)
-1. [Sesi Kapatılmayan Otomatik Oynatılan Videoları Gizleyin](#hide-autoplay-videos-that-arent-muted)
-1. [Flexible Ögeler İçin `:root` Kullanın](#use-root-for-flexible-type)
-1. [Daha İyi Bir Mobil Kullanım İçin  Form Elemanlarının `font-size`'ını Ayarlayın](#set-font-size-on-form-elements-for-a-better-mobile-experience)
-1. [Fare Olayları İçin Pointer Event'larını Kullanın](#use-pointer-events-to-control-mouse-events)
-1. [Line Break'leri boşluk olarak kullanmak için `display: none` kullanın](#set-display-none-on-line-breaks-used-as-spacing)
+1. ["Lobotomized Owl" Seçicisini Kullanın](#lobotomized-owl-seçicisini-kullanın)
+1. [Pure CSS Slider'lar İçin `max-height` Kullanın](#pure-css-sliderlar-i̇çin-max-height-kullanın)
+1. [Tablo Hücrelerinin Genişliklerini Eşitleyin](#tablo-hücrelerinin-genişliklerini-eşitleyin)
+1. [Flexbox İle Margin'den Kurtulun](#flexbox-i̇le-marginden-kurtulun)
+1. [Boş Linkler İle Attribute Selector'larini Kullanın](#boş-linkler-i̇le-attribute-selectorlarini-kullanın)
+1. [Link'lerin varsayılan halini stillendirin](#linklerin-varsayılan-halini-stillendirin)
+1. [Intrinsic Ratio Box'ları](#intrinsic-ratio-boxları)
+1. [Hatalı Image'leri stillendirin](#hatalı-imageleri-stillendirin)
+1. [Global Boyutlandırma İçin `rem` Kullanın; Lokal Boyutlandırma İçin `em` Kullanın](#global-boyutlandırma-i̇çin-rem-kullanın-lokal-boyutlandırma-i̇çin-em-kullanın)
+1. [Sesi Kapatılamayan Otomatik Oynatılan Videoları Gizleyin](#sesi-kapatılamayan-otomatik-oynatılan-videoları-gizleyin)
+1. [Flexible Ögeler İçin `:root` Kullanın](#lexible-ögeler-i̇çin-root-kullanın)
+1. [Daha İyi Bir Mobil Deneyim İçin Form Elemanlarının `font-size`'ını Ayarlayın](#daha-i̇yi-bir-mobil-deneyim-i̇çin-form-elemanlarının-font-sizeını-ayarlayın)
+1. [Fare Olayları İçin Pointer Event'larını Kullanın](#fare-olayları-i̇çin-pointer-eventlarını-kullanın)
+1. [Line Break'leri boşluk olarak kullanmak için `display: none` kullanın](#line-breakleri-boşluk-olarak-kullanmak-için-display-none-kullanın)
 
 
 ### CSS Sıfırlama Kullanın
@@ -536,7 +536,7 @@ Now each module becomes compartmentalized and easier to style, more maintainable
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
-### Sesi Kapatılmayan Otomatik Oynatılan Videoları Gizleyin
+### Sesi Kapatılamayan Otomatik Oynatılan Videoları Gizleyin
 
 This is a great trick for a custom user stylesheet. Avoid overloading a user with sound from a video that autoplays when the page is loaded. If the sound isn't muted, don't show the video:
 
@@ -574,7 +574,7 @@ body {
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
-### Daha İyi Bir Mobil Kullanım İçin  Form Elemanlarının `font-size`'ını Ayarlayın
+### Daha İyi Bir Mobil Deneyim İçin Form Elemanlarının `font-size`'ını Ayarlayın
 
 To avoid mobile browsers (iOS Safari, _et al_.) from zooming in on HTML form elements when a `<select>` drop-down is tapped, add `font-size` to the selector rule:
 
