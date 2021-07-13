@@ -2,7 +2,7 @@
   <img src="https://rawgit.com/AllThingsSmitty/css-protips/master/media/logo.svg" width="200" alt="light bulb icon">
 </p>
 
-# Uzman CSS Tavsiyelerin [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Uzman CSS Tavsiyeleri [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 CSS becerilerinizi profesyonel hale getirmenize yardımcı olacak ipuçları koleksiyonu.
 
@@ -12,7 +12,7 @@ CSS becerilerinizi profesyonel hale getirmenize yardımcı olacak ipuçları kol
 ## İçindekiler
 
 * [Tavsiyeler](#tavsiyeler)
-* [Desteklenenler](#desteklenenler)
+* [Desteklenenler](#desteklenenler-tarayıcıları)
 * [Çeviriler](#çeviriler)
 * [Katkı Rehberi](../../CONTRIBUTING.md)
 
@@ -37,10 +37,10 @@ CSS becerilerinizi profesyonel hale getirmenize yardımcı olacak ipuçları kol
 1. [Boş Linkler İle Attribute Selector'larini Kullanın](#boş-linkler-i̇le-attribute-selectorlarini-kullanın)
 1. [Link'lerin varsayılan halini stillendirin](#linklerin-varsayılan-halini-stillendirin)
 1. [Intrinsic Ratio Box'ları](#intrinsic-ratio-boxları)
-1. [Hatalı Image'leri stillendirin](#hatalı-imageleri-stillendirin)
+1. [Bozuk Image'leri stillendirin](#bozuk-imageleri-stillendirin)
 1. [Global Boyutlandırma İçin `rem` Kullanın; Lokal Boyutlandırma İçin `em` Kullanın](#global-boyutlandırma-i̇çin-rem-kullanın-lokal-boyutlandırma-i̇çin-em-kullanın)
 1. [Sesi Kapatılamayan Otomatik Oynatılan Videoları Gizleyin](#sesi-kapatılamayan-otomatik-oynatılan-videoları-gizleyin)
-1. [Flexible Ögeler İçin `:root` Kullanın](#lexible-ögeler-i̇çin-root-kullanın)
+1. [Flexible Ögeler İçin `:root` Kullanın](#flexible-ögeler-i̇çin-root-kullanın)
 1. [Daha İyi Bir Mobil Deneyim İçin Form Elemanlarının `font-size`'ını Ayarlayın](#daha-i̇yi-bir-mobil-deneyim-i̇çin-form-elemanlarının-font-sizeını-ayarlayın)
 1. [Fare Olayları İçin Pointer Event'larını Kullanın](#fare-olayları-i̇çin-pointer-eventlarını-kullanın)
 1. [Line Break'leri boşluk olarak kullanmak için `display: none` kullanın](#line-breakleri-boşluk-olarak-kullanmak-için-display-none-kullanın)
@@ -48,7 +48,7 @@ CSS becerilerinizi profesyonel hale getirmenize yardımcı olacak ipuçları kol
 
 ### CSS Sıfırlama Kullanın
 
-CSS sıfırlamaları, stil öğeleri için temiz bir sayfa ile farklı tarayıcılar arasında stil tutarlılığının sağlanmasına yardımcı olur. [Normalize](http://necolas.github.io/normalize.css/) CSS sıfırlama kütüphaneleri kullanabilirsiniz veya daha basit bir sıfırlama yöntemini tercih edebilirsiniz :
+CSS sıfırlama, stil öğeleri için temiz bir sayfa ile farklı tarayıcılar arasında stil tutarlılığının sağlanmasına yardımcı olur. [Normalize](http://necolas.github.io/normalize.css/) gibi CSS sıfırlama kütüphaneleri kullanabilirsiniz veya daha basit bir sıfırlama yöntemini tercih edebilirsiniz :
 
 ```css
 *,
@@ -60,11 +60,11 @@ CSS sıfırlamaları, stil öğeleri için temiz bir sayfa ile farklı tarayıc�
 }
 ```
 
-Şimdi elementler padding ve margin ayrıldı, `box-sizing` ile CSS box model düzenini kontrol edebilirsiniz.
+Şimdi elementler padding'den ve margin'den sıyrıldı, `box-sizing` ile CSS box model düzenini kontrol edebilirsiniz.
 
 #### [Demo](http://codepen.io/AllThingsSmitty/pen/kkrkLL)
 
-**Not:** Eğer [kalıtsal olarak `box-sizing`](#inherit-box-sizing) kullanılıyorsanız CSS sıfırlamaya `box-sizing` eklemenize gerek yok.
+**Not:** Eğer [kalıtsal olarak `box-sizing`](#box-sizingi-kalıtın) kullanılıyorsanız CSS sıfırlamaya `box-sizing` eklemenize gerek yok.
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
@@ -125,7 +125,7 @@ button {
 Tüm navigasyona Border ekledik ...
 
 ```css
-/* add border */
+/* border ekle */
 .nav li {
   border-right: 1px solid #666;
 }
@@ -134,13 +134,13 @@ Tüm navigasyona Border ekledik ...
 ... ve navigasyon içindeki son elemandan border'ı kaldırdık...
 
 ```css
-/* remove border */
+/* border kaldır */
 .nav li:last-child {
   border-right: none;
 }
 ```
 
-... Bunu yerine istemediğiniz eleman için `:not()` pseudo sınıfını ekleyin ve o hariç tüm eleman etkilensin.
+... Bunu yerine istemediğiniz eleman için `:not()` pseudo kodunu ekleyin ve o hariç tüm eleman etkilensin.
 
 ```css
 .nav li:not(:last-child) {
@@ -148,7 +148,7 @@ Tüm navigasyona Border ekledik ...
 }
 ```
 
-İşte daha okunabilir bir CSS seçicisi.
+İşte karşınızda daha okunabilir bir CSS.
 
 #### [Demo](http://codepen.io/AllThingsSmitty/pen/LkymvO)
 
@@ -157,17 +157,17 @@ Tüm navigasyona Border ekledik ...
 
 ### Font'un Lokal Olarak Yüklenip Yüklenmediğini Kontrol Edin
 
-Bir yazı tipini indirmeden önce yerel olarak yüklenip yüklenmediğini kontrol edebilirsiniz, bu performansınızı iyi bir şekilde etkileyecektir.
+Bir yazı tipini kaynağından indirmeden önce yerel olarak yüklenip yüklenmediğini kontrol edebilirsiniz, bu performansınızı iyi bir şekilde etkileyecektir.
 
 ```css
 @font-face {
   font-family: "Dank Mono";
   src:
-    /* Full name */
+    /* tam ad */
     local("Dank Mono"),
-    /* Postscript name */
+    /* Postscript ad */
     local("Dank Mono"),
-    /* Otherwise, download it! */
+    /* server'dan indir */
     url("//...a.server/fonts/DankMono.woff");
 }
 
@@ -176,7 +176,7 @@ code {
 }
 ```
 
-Bu ipucunu paylaştığı için Adam Argyle'a sonsuz teşekkürler, [demo](https://codepen.io/argyleink/pen/VwYJpgR).
+Bu ipucunu paylaştığı için Adam Argyle'a şukranlarımızı sunarız, [demo](https://codepen.io/argyleink/pen/VwYJpgR).
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
@@ -191,7 +191,7 @@ body {
 }
 ```
 
-Metinsel elemanlar `body`'den kalıtım alacaklardır.
+Tüm metinsel elemanlar `body`'den kalıtım alacaklardır.
 
 #### [Demo](http://codepen.io/AllThingsSmitty/pen/VjbdYd)
 
@@ -200,7 +200,7 @@ Metinsel elemanlar `body`'den kalıtım alacaklardır.
 
 ### Form Elemanları İçin `:focus` Ekleyin
 
-Deneyimli kullanıcılar sayfada ilerlemek için klavyeyi kullanır ve bir sonraki adımın neresi olduğunu `focus` sayesinde anlarlar. Bir tarayıcının varsayılan uygulamasından sonra form öğelerinin öne çıkmasını ve tutarlı olmasını sağlayın:
+Deneyimli kullanıcılar sayfada ilerlemek için klavyeyi kullanırlar ve bir sonraki adımın neresi olduğunu `focus` sayesinde anlarlar. Bir tarayıcının varsayılan uygulamasından sonra form öğelerinin öne çıkmasını ve tutarlı olmasını sağlayın:
 
 ```css
 a:focus,
@@ -250,7 +250,7 @@ body {
 }
 ```
 
-Başka bir şeyi ortalamak mı istiyorsun? Dikey, yatay...herhangi bir şey, herhangi bir zaman, herhangi bir yerde? CSS-Tricks bunları nasıl yapacağını [güzelce yazmış](https://css-tricks.com/centering-css-complete-guide/).
+Başka bir şeyi ortalamak mı istiyorsun? herhangi bir yerde, herhangi bir zamanda, dikey, yatay hiç farketmez. CSS-Tricks bunları nasıl yapacağını [güzelce yazmış](https://css-tricks.com/centering-css-complete-guide/).
 
 **Not:** IE11 için hatalı flexbox kullanımı ile ilgili şu [videoyu](https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items) izleyebilirsin.
 
@@ -261,7 +261,7 @@ Başka bir şeyi ortalamak mı istiyorsun? Dikey, yatay...herhangi bir şey, her
 
 ### Listeleri Virgül İle Ayırın
 
-Listelerinizi gerçekçi göstermek için comma-separated kullanın:
+Listelerinizi gerçekçi göstermek için virgül kullanın:
 
 ```css
 ul > li:not(:last-child)::after {
@@ -271,7 +271,7 @@ ul > li:not(:last-child)::after {
 
 Son elemana da virgül eklememek için `:not()` pseudo sınıfını kullanın
 
-**Not:** Bu ipucu, erişilebilirlik, özellikle ekran okuyucular için ideal olmayabilir ve kopyala/yapıştır CSS tarafından oluşturulan içerikle çalışmaz. Bunları göz önünde tut.
+**Not:** Bu ipucu, erişilebilirlik, özellikle ekran okuyucular için ideal olmayabilir ve kopyala/yapıştır CSS tarafından oluşturulan içerikle çalışmaz. Geliştirme yaparken bunları göz önünde bulundur.
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
@@ -291,10 +291,10 @@ li:nth-child(-n+3) {
 }
 ```
 
-Veya zaten öğrendiğimiz [`:not()`'ı](#use-not-to-applyunapply-borders-on-navigation) deneyebiliriz:
+Veya zaten öğrendiğimiz [`:not()`'ı](#unavigasyona-border-eklemek-veya-kaldırmak-i̇çin-not-kullanın) deneyebiliriz:
 
 ```css
-/* ilk üç eleman dışındaki tüm elemanları seçer ve gösteriri */
+/* ilk üç eleman dışındaki tüm elemanları seçer ve gösterir */
 li:not(:nth-child(-n+3)) {
   display: block;
 }
@@ -307,7 +307,7 @@ li:not(:nth-child(-n+3)) {
 
 ### İkonlar İçin SVG Kullanın
 
-İkonlar için SVG kullanmamanın bir nedeni yok:
+İkonlar için SVG kullanmamanın mantıklıca bir nedeni yok:
 
 ```css
 .logo {
@@ -315,9 +315,9 @@ li:not(:nth-child(-n+3)) {
 }
 ```
 
-SVG, tüm çözünürlük türleri için iyi ölçeklenir ve [IE9'a kadar](http://caniuse.com/#search=svg) tüm tarayıcılarda desteklenir. png, jpg, veya .gif-jif- her neyse gibi dosya tiplerini terk edin.
+SVG, tüm çözünürlük türleri için çok daha iyi ölçeklenir ve [IE9'a kadar](http://caniuse.com/#search=svg) tüm tarayıcılarda desteklenir. png, jpg veya .gif-jif(artık her neyse) gibi dosya tiplerini kullanmayı derhal terk edin.
 
-**Not:** Eğer SVG kullanıyorsanız ve yüklenmiyorsa bu erişebilirliğin korunmasına yardımcı olur:
+**Not:** Eğer SVG kullanıyorsanız ve yüklenmiyorsa aşağıdaki kod erişebilirliğin korunmasına yardımcı olur:
 
 ```css
 .no-svg .icon-only::after {
@@ -330,7 +330,7 @@ SVG, tüm çözünürlük türleri için iyi ölçeklenir ve [IE9'a kadar](http:
 
 ### "Lobotomized Owl" Seçicisini Kullanın
 
-It may have a strange name but using the universal selector (`*`) with the adjacent sibling selector (`+`) can provide a powerful CSS capability:
+Garip bir adı olabilir, ancak evrensel seçiciyi (*) komşu seçiciyle (+) kullanmak güçlü bir CSS yeteneği sağlayabilir.
 
 ```css
 * + * {
@@ -338,9 +338,9 @@ It may have a strange name but using the universal selector (`*`) with the adjac
 }
 ```
 
-In this example, all elements in the flow of the document that follow other elements will receive `margin-top: 1.5em`.
+Bu örnekte, document üzerindeki diğer öğeleri takip eden tüm öğeler `margin-top: 1.5em` olarak ayarlanır.
 
-For more on the "lobotomized owl" selector, read [Heydon Pickering's post](http://alistapart.com/article/axiomatic-css-and-lobotomized-owls) on *A List Apart*.
+"Lobotomized owl" seçicisi hakkında daha fazla bilgi için *A List Apart*'ta bulunan [Heydon Pickering'in paylaşımını](http://alistapart.com/article/axiomatic-css-and-lobotomized-owls) okuyabilirsiniz.
 
 #### [Demo](http://codepen.io/AllThingsSmitty/pen/grRvWq)
 
@@ -349,7 +349,7 @@ For more on the "lobotomized owl" selector, read [Heydon Pickering's post](http:
 
 ### Pure CSS Slider'lar İçin `max-height` Kullanın
 
-Implement CSS-only sliders using `max-height` with overflow hidden:
+Yalnızca CSS kullanarak yaptığınız Slider'ınıza `max-height` ekleyerek gizlenebilir hale getirebilirsiniz:
 
 ```css
 .slider {
@@ -364,14 +364,14 @@ Implement CSS-only sliders using `max-height` with overflow hidden:
 }
 ```
 
-The element expands to the `max-height` value on hover and the slider displays as a result of the overflow.
+üzerine gelindiğinde `max-height` değerine genişler ve taşmanın(overflow) bir sonucu olarak kaydırıcı görüntülenir.
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
 ### Tablo Hücrelerinin Genişliklerini Eşitleyin
 
-Tables can be a pain to work with. Try using `table-layout: fixed` to keep cells at equal width:
+Tablolar çalışmak sancılıdır. Hücreleri eşit genişlikte tutmak için `table-layout: fixed` kullanmayı deneyin:
 
 ```css
 .calendar {
@@ -379,7 +379,7 @@ Tables can be a pain to work with. Try using `table-layout: fixed` to keep cells
 }
 ```
 
-Pain-free table layouts.
+İşte karşınızda acısız bir tablo düzeni.
 
 #### [Demo](http://codepen.io/AllThingsSmitty/pen/jALALm)
 
@@ -388,7 +388,7 @@ Pain-free table layouts.
 
 ### Flexbox İle Margin'den Kurtulun
 
-When working with column gutters you can get rid of `nth-`, `first-`, and `last-child` hacks by using flexbox's `space-between` property:
+Sütunlar ile çalışırken flexbox'ın `space-between` özelliğini kullanarak `nth-`, `first-` ve `last-child` hack'lerden kurtulabilirsiniz:
 
 ```css
 .list {
@@ -401,14 +401,14 @@ When working with column gutters you can get rid of `nth-`, `first-`, and `last-
 }
 ```
 
-Now column gutters always appear evenly-spaced.
+Artık sütun olukları her zaman eşit aralıkta görünür.
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
 ### Boş Linkler İle Attribute Selector'larini Kullanın
 
-Display links when the `<a>` element has no text value but the `href` attribute has a link:
+`<a>` öğesinin metin değeri olmadığında ama `href` attribute'ü olduğunda da bağlantıları görüntüleyin:
 
 ```css
 a[href^="http"]:empty::before {
@@ -416,7 +416,7 @@ a[href^="http"]:empty::before {
 }
 ```
 
-That's pretty convenient.
+Bu oldukça kullanışlıdır.
 
 #### [Demo](http://codepen.io/AllThingsSmitty/pen/zBzXRx)
 
@@ -425,7 +425,7 @@ That's pretty convenient.
 
 ### Link'lerin varsayılan halini stillendirin
 
-Add a style for "default" links:
+Link'ler için varsayılan stil ekleyin:
 
 ```css
 a[href]:not([class]) {
@@ -434,14 +434,14 @@ a[href]:not([class]) {
 }
 ```
 
-Now links that are inserted via a CMS, which don't usually have a `class` attribute, will have a distinction without generically affecting the cascade.
+Artık `class` özniteliğine sahip olmayan bir CMS aracılığıyla eklenen bağlantılar, genel olarak etkilemeden bir farklılığa sahip olacaklar.
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
 ### Intrinsic Ratio Box'ları
 
-To create a box with an intrinsic ratio, all you need to do is apply top or bottom padding to a div:
+Gerçek orana sahip bir kutu oluşturmak için tek yapmanız gereken bir div'e üst veya alt `padding` uygulamaktır:
 
 ```css
 .container {
@@ -460,16 +460,16 @@ To create a box with an intrinsic ratio, all you need to do is apply top or bott
 }
 ```
 
-Using 20% for padding makes the height of the box equal to 20% of its width. No matter the width of the viewport, the child div will keep its aspect ratio (100% / 20% = 5:1).
+Padding için %20 kullanmak, kutunun yüksekliğini genişliğinin %20'sine eşit yapar. Görüntü alanının genişliği ne olursa olsun, alt div en boy oranını (%100 / %20 = 5:1) koruyacaktır.
 
 #### [Demo](http://codepen.io/AllThingsSmitty/pen/jALZvE)
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
-### Hatalı Image'leri stillendirin
+### Bozuk Image'leri stillendirin
 
-Make broken images more aesthetically-pleasing with a little bit of CSS:
+Biraz CSS ile çalışmayan görüntüleri daha estetik hale getirin:
 
 ```css
 img {
@@ -484,11 +484,11 @@ img {
 }
 ```
 
-Now add pseudo-elements rules to display a user message and URL reference of the broken image:
+Şimdi, bozuk görüntünün bir kullanıcı mesajını ve URL referansını görüntülemek için sözde öğeler kuralları ekleyin:
 
 ```css
 img::before {
-  content: "We're sorry, the image below is broken :(";
+  content: "Üzgünüz, resim bulunamıyor veya açılamıyor :(";
   display: block;
   margin-bottom: 10px;
 }
@@ -499,15 +499,14 @@ img::after {
   font-size: 12px;
 }
 ```
-
-Learn more about styling for this pattern in [Ire Aderinokun](https://github.com/ireade/)'s [original post](http://bitsofco.de/styling-broken-images/).
+[Ire Aderinokun](https://github.com/ireade/)'un [orijinal gönderisinde](http://bitsofco.de/styling-broken-images/) bu modelin stili hakkında daha fazla bilgi edinin.
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
 ### Global Boyutlandırma İçin `rem` Kullanın; Lokal Boyutlandırma İçin `em` Kullanın
 
-After setting the base font size at the root (`html { font-size: 100%; }`), set the font size for textual elements to `em`:
+Base'de temel yazı tipi boyutunu ayarladıktan sonra (`html { yazı tipi boyutu: %100; }`) metin öğeleri için yazı tipi boyutunu `em` olarak ayarlayın:
 
 ```css
 h2 {
@@ -519,7 +518,7 @@ p {
 }
 ```
 
-Then set the font-size for modules to `rem`:
+Ardından modüllerin yazı tipi boyutunu `rem` ile ayarlayın:
 
 ```css
 article {
@@ -531,14 +530,14 @@ aside .module {
 }
 ```
 
-Now each module becomes compartmentalized and easier to style, more maintainable, and flexible.
+Artık her modül bölümlere ayrılmış ve stili daha kolay, bakımı daha kolay ve esnek hale geliyor.
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
 ### Sesi Kapatılamayan Otomatik Oynatılan Videoları Gizleyin
 
-This is a great trick for a custom user stylesheet. Avoid overloading a user with sound from a video that autoplays when the page is loaded. If the sound isn't muted, don't show the video:
+Bu, özel bir kullanıcı stil sayfası için harika bir ipucudur. Sayfa yüklendiğinde otomatik olarak oynatılan bir videodan gelen sesle kullanıcıyı aşırı yormaktan kaçının. Ses kapatılmamışsa videoyu göstermeyin:
 
 ```css
 video[autoplay]:not([muted]) {
@@ -546,14 +545,12 @@ video[autoplay]:not([muted]) {
 }
 ```
 
-Once again, we're taking advantage of using the [`:not()`](#use-not-to-applyunapply-borders-on-navigation) pseudo-class.
-
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
 ### Flexible Ögeler İçin `:root` Kullanın
 
-The type font size in a responsive layout should be able to adjust with each viewport. You can calculate the font size based on the viewport height and width using `:root`:
+Cihaz boyutuna duyarlı bir tasarımda font boyutu her bir görünüm penceresiyle ayarlanabilmelidir. Font boyutunu görünüm penceresinin yüksekliğine ve genişliğine göre `:root` kullanarak hesaplayabilirsiniz:
 
 ```css
 :root {
@@ -561,7 +558,7 @@ The type font size in a responsive layout should be able to adjust with each vie
 }
 ```
 
-Now you can utilize the `root em` unit based on the value calculated by `:root`:
+Artık `root em` birimini `:root` tarafından hesaplanan değere göre kullanabilirsiniz:
 
 ```css
 body {
@@ -576,7 +573,7 @@ body {
 
 ### Daha İyi Bir Mobil Deneyim İçin Form Elemanlarının `font-size`'ını Ayarlayın
 
-To avoid mobile browsers (iOS Safari, _et al_.) from zooming in on HTML form elements when a `<select>` drop-down is tapped, add `font-size` to the selector rule:
+Bir `<select>` açılır menüsüne dokunulduğunda mobil tarayıcıların (iOS Safari ve diğerleri) HTML form öğelerini yakınlaştırmasını önlemek için `font-size` ekleyin:
 
 ```css
 input[type="text"],
@@ -594,7 +591,7 @@ textarea {
 
 ### Fare Olayları İçin Pointer Event'larını Kullanın
 
-[Pointer events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) allow you to specify how the mouse interacts with the element it's touching. To disable the default pointer event on a button, for instance:
+[İşaretçi olayları](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events), farenin dokunduğu öğeyle nasıl etkileşime gireceğini belirtmenize olanak tanır.Örneğin bir düğmeye basarak varsayılan işaretçi olayını devre dışı bırakmak için:
 
 ```css
 .button-disabled {
@@ -603,14 +600,13 @@ textarea {
 }
 ```
 
-It's that simple.
+Bu kadar basit
 
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
 ### Line Break'leri boşluk olarak kullanmak için `display: none` kullanın
-
-As [Harry Roberts pointed out](https://twitter.com/csswizardry/status/1170835532584235008), this can help prevent CMS users from using extra line breaks for spacing:
+[Harry Roberts'ın de belirttiği gibi](https://twitter.com/csswizardry/status/1170835532584235008), bu, CMS kullanıcılarının boşluk için fazladan satır sonları kullanmasını önlemeye yardımcı olabilir:
 
 ```css
 br + br {
@@ -621,7 +617,7 @@ br + br {
 <sup>[İçindekilere geri dön](#i̇çindekiler)</sup>
 
 
-## Desteklenenler
+## Desteklenenler Tarayıcılar
 
 Chrome, Firefox, Safari, Opera, Edge tarayıcılarının güncel versiyonları ve IE11.
 
